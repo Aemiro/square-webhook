@@ -12,7 +12,6 @@ async function getLocations() {
     let listLocationsResponse = await locationsApi.listLocations();
 
     let locations = listLocationsResponse.result.locations;
-
     locations.forEach(function (location) {
       console.log(
         location.id + ": " +
