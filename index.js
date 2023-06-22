@@ -24,6 +24,7 @@ app.post('/api/User/GetSquareToken',async(req, res)=>{
     console.log('body',req.body)
     res.send(await getToken(req.body));
   } catch (error) {
+    console.log(error)
     res.status(500).json({error: error.message})
   }
     
