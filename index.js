@@ -20,8 +20,8 @@ app.get('/',async(req, res)=>{
 app.post('/api/User/GetSquareToken',async(req, res)=>{
   try {
     console.log('headers',req.headers)
-    console.log('body',)
-    res.send(getToken(req.body));
+    console.log('body',req.body)
+    res.send(await getToken(req.body));
   } catch (error) {
     res.status(500).json({error: error.message})
   }
