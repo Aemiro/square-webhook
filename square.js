@@ -35,8 +35,8 @@ async function getLocations() {
 const getToken=async (payload)=>{
   try {
   const response = await client.oAuthApi.obtainToken({
-    clientId: 'sq0idp-B10AJ7ZYeMBMC24rsmrTeA',
-    clientSecret: 'EAAAFB6LbMdu2kuJRcP0gcv8vjZ88ey6oOCr3oaMyGlQJmDc5IlkH7Y02_vO_ob6',
+    clientId: 'sq0idp-u6A3sYjkrBqJ2RzbHpoKVg',
+    clientSecret: 'EAAAFMl6YyDra9NoASX74O-w-EVuJUr_hRbdXUq9WBlVsDupaGFkTlhRbTTUpBr3',
     code: payload.Code,//'sq0cgp-JEICoNFJNeQMVgaukGHMDQ',
     redirectUri: payload.RedirectUrl,
     grantType: 'authorization_code',
