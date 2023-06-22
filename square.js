@@ -33,6 +33,23 @@ async function getLocations() {
     }
   }
 };
+const getToken=async (payload)=>{
+  try {
+  const response = await client.oAuthApi.obtainToken({
+    clientId: 'sq0idp-B10AJ7ZYeMBMC24rsmrTeA',
+    clientSecret: 'EAAAFB6LbMdu2kuJRcP0gcv8vjZ88ey6oOCr3oaMyGlQJmDc5IlkH7Y02_vO_ob6',
+    code: payload.Code,//'sq0cgp-JEICoNFJNeQMVgaukGHMDQ',
+    redirectUri: payload.RedirectUrl,
+    grantType: 'authorization_code',
+    scopes: [
+    ],
+    shortLived: payload.ShortLived
+  });
 
-module.exports=getLocations;
+ return response;
+} catch(error) {
+  throw error;
+}  
+}
+module.exports={getLocations, getToken};
 // getLocations()
