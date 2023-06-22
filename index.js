@@ -2,6 +2,7 @@ const express=require('express');
 const {getLocations, getToken} = require('./square');
 const app=express();
 require('dotenv').config()
+app.use(express.json())
 app.post('/',async(req, res)=>{
     console.log('headers',req.headers)
     console.log('body',req.body)
