@@ -36,7 +36,7 @@ const getToken=async (payload)=>{
   try {
   const response = await client.oAuthApi.obtainToken({
     clientId: 'sq0idp-u6A3sYjkrBqJ2RzbHpoKVg',
-    clientSecret: 'EAAAFMl6YyDra9NoASX74O-w-EVuJUr_hRbdXUq9WBlVsDupaGFkTlhRbTTUpBr3',
+    clientSecret: 'sq0csp-zplPKFz4idxB2Z-Uh6Qp5n2dSVJGf4N35BiQfo-kBMI',
     code: payload.Code,//'sq0cgp-JEICoNFJNeQMVgaukGHMDQ',
     redirectUri: payload.RedirectUrl,
     grantType: 'authorization_code',
